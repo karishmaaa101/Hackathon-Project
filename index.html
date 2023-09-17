@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rasa & Flask Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<style>
+        /* Chat widget button styles */
+.chat-widget-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make it circular */
+    background-color: #007BFF; /* Blue color for the button */
+    color: #fff; /* White text color */
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out; /* Add a smooth hover effect */
+}
+
+.chat-widget-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Chat icon styles */
+.chat-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+.job-icon {
+            font-size: 32px;
+            margin-right: 12px;
+            color: #007BFF;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .job-icon:hover {
+            color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.1); /* Add a slight scale-up effect on hover */
+        }
+
+    </style>
+</head>
+<body>
+    
+   
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+    <a class="navbar-brand" href="#"><h1>DEMO WEBSITE</h1>
+        <!-- Chat widget button -->
+        <button id="chat-widget-button" type="button" class="chat-widget-button">
+            <i class="fas fa-robot"></i> <!-- Font Awesome robot icon -->
+        </button>
+        <!-- Chatbox -->
+
+
+        <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; right: 20px; width: 300px;">
+            <div class="card-header bg-primary text-white">
+                Chatbot
+                <button id="chat-widget-close-button" type="button" class="btn-close float-end" aria-label="Close"></button>
+            </div>
+
+            <div class="card-body" id="chat-widget-messages">
+                <!-- Chat messages will be appended here -->
+            </div>
+
+            <div class="card-footer">
+                <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
+            </div>
+            
+
+    </div>
+    
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="home.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+    </ul>
+    <div class="flex-btn">
+        <a href="login.html" class="option-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="register.html" class="option-btn"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+    <div id="dark-mode-toggle" class="dark-mode-toggle">
+        <i id="dark-mode-icon" class="fas fa-moon"></i> <!-- Moon icon for dark mode -->
+    </div>
+    
+  </div>
+    </div>
+    </nav>
+    <div class="flex-btn">
+        <a href="govt_job.html" class="option-btn">
+            <img src="/image/govt.png" alt="government Job" class="job-image">
+            Executive Jobs
+        </a>
+        <a href="pvt_job.html" class="option-btn">
+            <img src="/image/private.webp" alt="Private Job" class="job-image">
+            Managerial Jobs
+        </a>
+        <a href="self.html" class="option-btn">
+            <img src="/image/self.png" alt="Self-employment" class="job-image">
+            Self-employment
+        </a>
+        <a href="women.html" class="option-btn">
+            <img src="/image/women.png" alt="job's for women" class="job-image">
+            Job's women
+        </a>
+        <a href="counselling.html" class="option-btn">
+            <img src="/image/counselling.png" alt="counselling" class="job-image">
+            Counselling
+    </div>
+<script src="script.js"></script>
+
+<script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+const darkModeIcon = document.getElementById('dark-mode-icon');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    
+    // Toggle the icon based on the mode
+    if (isDarkMode) {
+        darkModeIcon.classList.remove('fa-moon');
+        darkModeIcon.classList.add('fa-sun');
+    } else {
+        darkModeIcon.classList.remove('fa-sun');
+        darkModeIcon.classList.add('fa-moon');
+    }
+
+    // Save the user's preference to local storage
+    localStorage.setItem('darkMode', isDarkMode);
+});
+
+// Check if the user has previously set dark mode
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// Apply dark mode and update the icon based on the user's preference
+if (isDarkMode) {
+    body.classList.add('dark-mode');
+    darkModeIcon.classList.remove('fa-moon');
+    darkModeIcon.classList.add('fa-sun');
+}
+
+</script>
+
+</body>
+</html>
