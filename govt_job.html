@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sector {
+            text-align: center;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .sector:hover {
+            transform: scale(1.1);
+        }
+
+        .sector-icon {
+            font-size: 64px;
+            color: #3498db;
+        }
+
+        .sector-name {
+            font-size: 18px;
+            color: #444444;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #notification-panel {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+            padding: 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #notification-panel h2 {
+            margin: 0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #notification-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #notification-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        #notification-panel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 250px;
+        padding: 20px;
+        background-color: #3498db;
+        color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease; /* Added transition for smooth movement */
+    }
+
+    #notification-panel:hover {
+        transform: translateY(0); /* Bring it back to its original position */
+    }
+
+        .sector-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .employment-sector {
+            flex-basis: 25%;
+        }
+
+        #written-testimonials {
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .testimonial-box {
+        border: 2px solid #3498db;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-box:hover {
+        transform: scale(1.05);
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="https://www.pgrkam.com/images/logo-new2.png" alt="Punjab Ghar Ghar Rozgar Logo">
+            <h1>PUNJAB GHAR GHAR ROZGAR</h1>
+            <h2>Department of Employment Generation, Skill Development & Training - Govt. of Punjab, India</h2>
+        </div>
+    </header>
+
+    <div id="content">
+        
+        <div class="sector-container">
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-briefcase"></i>
+                <span class="sector-name">Jobs</span>
+            </div>
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-graduation-cap"></i>
+                <span class="sector-name">Skill Training</span>
+            </div>
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-users"></i>
+                <span class="sector-name">Self Employment</span>
+            </div>
+            
+            
+           
+        </div>
+
+    
+        <div class="sector-container">
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-wheelchair"></i>
+                <span class="sector-name">Jobs for Persons with Disability</span>
+            </div>
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-female"></i>
+                <span class="sector-name">Jobs for Women</span>
+            </div> 
+            
+            
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-comment"></i>
+                <span class="sector-name">Counselling</span>
+            </div>
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-shield-alt"></i>
+                <span class="sector-name">Induction into Armed Forces</span>
+            </div>
+            <div class="employment-sector sector">
+                <i class="sector-icon fas fa-map-marker-alt"></i>
+                <span class="sector-name">Local Services</span>
+            </div>
+        </div>
+    </div>
+    
+    <section id="written-testimonials">
+        <h2>Testimonials </h2>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                We want to express our heartfelt gratitude to the Punjab Ghar Ghar Rozgar initiative. Your program has truly transformed lives and made a significant impact on our community. The opportunities provided for employment, skill development, and self-employment have been life-changing for many of us.
+                <br> ~ <b>Harsimran Sahdev</b>
+            </p>
+        </div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Through your efforts, we have gained valuable skills, secured fulfilling jobs, and achieved financial independence. Your dedication to promoting employment, especially for women and persons with disabilities, is commendable.
+                <br>~ <b>Manpreet Kaur</b>
+            </p>
+        </div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                The Punjab Ghar Ghar Rozgar initiative has been a beacon of hope, and we are thankful for the positive changes it has brought into our lives. We look forward to continued support and growth.
+               <br> ~ <b>Jaskaran Singh</b>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <a href="#">Career Information</a> |
+            <a href="#">Give Feedback</a> |
+            <a href="#">Help</a> |
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+
+    <div id="notification-panel">
+        <h2>Latest Recruitment Updates</h2>
+        <ul id="notification-list">
+            <li><b>Executive Technical Support</b> under Punjab Infotech <br>--- Posted 1 day ago</li>
+            <li>Recruitment Update - <b>DGM-Finance, Manager Finance, EA(Accounts)</b> under PSDM<br>--- Posted 2 days ago</li>
+            <li>Tender for Taxi Hiring - PGRKAM <br>-- Posted on 24/08/233</li>
+            <li>Punjab Skill Development Mission is providing Free Skilling Trainings followed by Employment facilitations - To Apply for the Course of Rubber Product-Quality Assurance Supervisor, Rubber Calendering Operator, Rubber Internal Mixer Operator, Tyre Fitter-Servicing and Maintenance, Assistant Operator-Tyre Retreading - Building & Curing, Rubber Extruder Operator or Rubber Moulding /Curing Supervisor in District Ludhiana
+
+                <br>
+                ---Posted On: 05-04-2023</li>
+        </ul>
+    </div>
+    <script>
+        // JavaScript to move the notification panel with scrolling
+        const notificationPanel = document.getElementById('notification-panel');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            notificationPanel.style.transform = `translateY(${scrollY}px)`;
+        });
+    </script>
+</body>
+</html>
